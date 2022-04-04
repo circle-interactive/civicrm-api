@@ -6,6 +6,12 @@ using the REST API v4 functionality within CiviCRM.
 This code is intended to be used outside of a CiviCRM deployment environment. As such, the codebase adheres to PSR-12
 coding standards instead of Drupal/Wordpress/CiviCRM coding standards.
 
+## Installation
+
+To install the library, run the following command:
+
+`composer require circle-interactive/civicrm-api`
+
 ## Requirements
 
 1. The CiviCRM server **must** be running on v5.36 or later. 
