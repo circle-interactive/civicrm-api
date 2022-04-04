@@ -1,0 +1,62 @@
+{
+  "name": "circle-interactive/civicrm-api",
+  "type": "library",
+  "description": "An API library to enable and facilitate interacting with a remote CiviCRM site.",
+  "keywords": ["civicrm", "remote api library", "developer api"],
+  "homepage": "https://www.github.com/circle-interactive/civicrm-api",
+  "license": "AGPL-3.0",
+  "authors": [
+    {
+      "name": "Matt Trim",
+      "email": "matt@circle-interactive.co.uk",
+      "homepage": "https://www.circle-interactive.co.uk"
+    }
+  ],
+  "support": {
+    "docs": "https://www.github.com/circle-interactive/civicrm-api",
+    "issues": "https://github.com/circle-interactive/civicrm-api/issues",
+    "source": "https://github.com/circle-interactive/civicrm-api"
+  },
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "ext-json": "*",
+    "laminas/laminas-diactoros": "^2.9",
+    "psr/http-client": "^1.0.1",
+    "psr/http-factory": "^1.0",
+    "psr/http-message": "^1.0"
+  },
+  "require-dev": {
+    "guzzlehttp/guzzle": "^7.4",
+    "nyholm/psr7": "^1.5",
+    "pestphp/pest": "^1.21",
+    "phpstan/phpstan": "^1.4",
+    "phpunit/phpunit": "^9",
+    "squizlabs/php_codesniffer": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Circle\\CiviCRM\\": "CiviCRM"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Circle\\CiviCRM\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": [
+      "@pest",
+      "@phpstan",
+      "@phpcs"
+    ],
+    "pest": "pest",
+    "phpstan": "phpstan analyse CiviCRM tests --memory-limit=-1",
+    "phpcs": "vendor/bin/phpcs --standard=PSR12 CiviCRM"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}

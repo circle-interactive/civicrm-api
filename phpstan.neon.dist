@@ -1,0 +1,9 @@
+parameters:
+    level: 6
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        -
+            message: '#Undefined variable: \$[a-zA-Z0-9\\_]#'
+            path: tests/Pest.php
+    excludePaths:
+        - tests/Mocks/*
