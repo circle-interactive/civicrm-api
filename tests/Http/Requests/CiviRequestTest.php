@@ -79,7 +79,7 @@ test('the URI is correct when the request does not have parameters', function ()
 test('the URI is correct when the request has parameters', function () {
     $entity = 'Activity';
     $action = 'create';
-    $params = ['activity_type_id' => 1, 'subject' => 'Test Activity',];
+    $params = ['values' => ['activity_type_id' => 1, 'subject' => 'Test Activity',]];
 
     $requestBuilder = new CiviRequest($entity, $action, $params);
     $requestBuilder->setRequiredParams(true);
