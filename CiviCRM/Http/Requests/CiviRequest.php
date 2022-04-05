@@ -51,7 +51,7 @@ class CiviRequest extends AbstractRequestBuilder
         );
 
         if (!empty($this->params)) {
-            $json = json_encode(['values' => $this->params]);
+            $json = json_encode($this->params);
             $url = sprintf("%s?params=%s", $url, urlencode($json));
         }
 
