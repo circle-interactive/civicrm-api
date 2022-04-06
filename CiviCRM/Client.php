@@ -53,15 +53,20 @@ final class Client
      *
      * @param string $authenticationKey
      *  The authentication key for the selected authentication type.
+     *
+     * @param array<string, string> $customHeaders
+     *  Custom headers to apply to the request.
      */
     public function __construct(
         ClientInterface $httpClient,
         string $authenticationType,
-        string $authenticationKey
+        string $authenticationKey,
+        array $customHeaders = []
     ) {
         $this->httpClient = $httpClient;
         $this->authenticationType = $authenticationType;
         $this->authenticationKey = $authenticationKey;
+        $this->defaultHeaders += $customHeaders;
 
         if (!AuthenticationTypes::isValidType($authenticationType)) {
             throw new RuntimeException("Invalid authentication type {$authenticationType}.");
