@@ -14,7 +14,9 @@ To install the library, run the following command:
 
 ## Requirements
 
-1. The CiviCRM server **must** be running on v5.36 or later. 
+1. The CiviCRM server **must** be running on v5.47 or later. 
+
+In this release, the `/civicrm/ajax/*` endpoints were exposed as web services as part of currently ongoing efforts to expose REST endpoints via the standard CiviCRM routing system. [Click here to learn more](https://lab.civicrm.org/dev/core/-/issues/2077).
 
 2. Your application **must** use an HTTP client that is [PSR-18](https://www.php-fig.org/psr/psr-18/) compliant.
 
